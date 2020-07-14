@@ -15,6 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://github.com/GitXwj/react-native-local-barcode-recognizer",
   "keywords": [
     "react-native",
     "barcode",
