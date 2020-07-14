@@ -3,7 +3,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "RNReactNativeLocalBarcodeRecognizer.h"
-#import <ZXingObjC/ZXingObjC.h>
+#import "ZXingObjC-3.2.2/ZXingObjC/ZXingObjC.h"
 @implementation RNReactNativeLocalBarcodeRecognizer
 
 - (dispatch_queue_t)methodQueue
@@ -52,7 +52,7 @@ RCT_EXPORT_METHOD(decode:(NSString *)base64EncodedImage
         // The coded result as a string. The raw data can be accessed with
         // result.rawBytes and result.length.
         NSString *contents = result.text;
-        
+
         // The barcode format, such as a QR code or UPC-A
         //ZXBarcodeFormat format = result.barcodeFormat;
         resolve(contents);
@@ -61,7 +61,7 @@ RCT_EXPORT_METHOD(decode:(NSString *)base64EncodedImage
         // not being found, an invalid checksum, or a format inconsistency.
         resolve(@"");
     }
-    
+
 }
 
 - (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData {
@@ -70,4 +70,4 @@ RCT_EXPORT_METHOD(decode:(NSString *)base64EncodedImage
 }
 
 @end
-  
+
